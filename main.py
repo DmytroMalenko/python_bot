@@ -5,13 +5,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("TOKEN")
+TOKEN_1 = os.getenv("TOKEN_1")
 
-if TOKEN is None:
+if TOKEN_1 is None:
     print("Token is not found!")
     exit()
     
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN_1)
 
 @bot.message_handler(commands=["start", "help"])
 def send_welcome(message):
@@ -48,10 +48,8 @@ def echo_all(message):
 if __name__ == "__main__":
         print("Bot is running...")
         bot.infinity_polling()
+
 '''
-
-
-
 
 
 

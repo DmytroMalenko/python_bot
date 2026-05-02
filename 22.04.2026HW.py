@@ -9,13 +9,13 @@ from dotenv import load_dotenv
 '''
 load_dotenv()
 
-TOKEN = os.getenv("TOKEN")
+TOKEN_2 = os.getenv("TOKEN_2")
 
-if TOKEN is None:
+if TOKEN_2 is None:
     print("Token is not found!")
     exit()
     
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN_2)
 
 @bot.message_handler()
 def ask(message):
@@ -57,7 +57,7 @@ def info(message):
 
 bot.infinity_polling()
 
-'''
+
 # Task 3
 
 load_dotenv()
@@ -99,3 +99,4 @@ def play(call):
     reply_markup=board()
 
 bot.infinity_polling()
+'''
